@@ -1,7 +1,8 @@
-# do not user slice for merging sorted arrays
-# # arr = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-# # insert = [0, 0, 0]
+my_list = [1, 2, 3]
+print(id(my_list[0]))  # 1のメモリアドレス（ID）
+print(id(my_list[1]))  # 2のメモリアドレス（ID）
 
-# # arr[2:] = insert[0:]
+print(id(my_list))  # リストのメモリアドレス（ID）
 
-# # output -> [2, 3, 0, 0, 0]
+# 1と2のメモリアドレスの差
+print(id(my_list[1]) - id(my_list[0])) 
