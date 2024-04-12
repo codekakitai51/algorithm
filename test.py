@@ -1,8 +1,5 @@
-my_list = [1, 2, 3]
-print(id(my_list[0]))  # 1のメモリアドレス（ID）
-print(id(my_list[1]))  # 2のメモリアドレス（ID）
+a = [1, 2, 3, 4, 5]
+# change a[2] to "e"
+a[2] = "e"
 
-print(id(my_list))  # リストのメモリアドレス（ID）
-
-# 1と2のメモリアドレスの差
-print(id(my_list[1]) - id(my_list[0])) 
+print(a)
