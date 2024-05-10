@@ -1,4 +1,6 @@
 class Solution:
+# time -> O(k * C(n, k)) Combinations of n choose k
+#  why k * -> because we are copying the current combination to the result list
     def combine(self, n: int, k: int) -> List[List[int]]:
         res = []
 
@@ -16,7 +18,7 @@ class Solution:
         return res
 
 
-# brute force time -> O(2 ** n * k)
+# brute force time -> O(k * 2^n)
 
         # num = 1
         # res = []
