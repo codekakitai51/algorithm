@@ -19,4 +19,3 @@ class Solution:
             tArr.append(tHash[t[i]])
         
         return True if sArr == tArr else False
-
