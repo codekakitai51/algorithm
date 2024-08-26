@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        # count = 1 + left + right
+        # tips: think from top to bottom count = 1 + left + right
 
         def DFS(node):
             if node == None:
