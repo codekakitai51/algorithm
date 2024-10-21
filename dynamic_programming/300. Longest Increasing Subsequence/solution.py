@@ -18,7 +18,7 @@ class Solution:
             if subArr[-1] < num:
                 subArr.append(num)
             else:
-                # find num <=, and remove all using binary search library
+                # find the index of the first element in subArr that is greater than or equal to num
                 # targetIdx = bisect.bisect_left(subArr, num)
                 targetIdx = BS(subArr, num)
                 subArr[targetIdx] = num
