@@ -1,21 +1,42 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        # binary search
-        if x == 0 or x == 1:
-            return x
-        l, r = 0, x
-        while l <= r:
-            m = (l + r) // 2
-            curNum = m ** 2
+        # binary search 「めぐる式」
+        def isOk(curPowNum):
+            return curPowNum > x
 
-            if curNum < x:
-                l = m + 1
-            elif curNum > x:
-                r = m - 1
+        ng, ok = -1, x + 1
+
+        while ok - ng > 1:
+            mid = (ng + ok) // 2
+            curPowNum = mid ** 2
+
+            if curPowNum == x:
+                return mid
+
+            if isOk(curPowNum):
+                ok = mid
             else:
-                return m
+                ng = mid
+
+        return ng
+
+
+        # binary search
+        # if x == 0 or x == 1:
+        #     return x
+        # l, r = 0, x
+        # while l <= r:
+        #     m = (l + r) // 2
+        #     curNum = m ** 2
+
+        #     if curNum < x:
+        #         l = m + 1
+        #     elif curNum > x:
+        #         r = m - 1
+        #     else:
+        #         return m
         
-        return r
+        # return r
         
         # if x == 0 or x == 1:
         #     return x
