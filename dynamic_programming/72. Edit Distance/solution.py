@@ -1,6 +1,6 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
-# true dp
+# true dp m * n
         dp = [ [float("inf")] * (len(word2) + 1) for _ in range(len(word1) + 1) ]
 
     # preset for edge values
