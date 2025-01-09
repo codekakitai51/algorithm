@@ -1,6 +1,6 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
-# This is smater
+# This is smarter
         vowels = {'a', 'e', 'i', 'o', 'u'}
         c = 0
         
